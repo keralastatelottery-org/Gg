@@ -100,7 +100,7 @@ function openGame(g){
    return;
  }
  const url=g.embedUrl||g.playUrl;
- if(!url){alert("This game has no demo URL configured yet.");return;}
+ if(!url){alert("This game has hot URL configured yet.");return;}
  currentGame=g;$("#modalTitle").textContent=g.name||"Game";$("#player").src=url;$("#modal").classList.add("open");document.body.style.overflow="hidden";
 }
 function closeGame(){$("#player").src="about:blank";$("#modal").classList.remove("open");document.body.style.overflow="";}
@@ -116,7 +116,7 @@ loadSheet().catch(() => {
   games = Array.isArray(fallbackData.games) ? fallbackData.games : [];
   setupFilters();
   render();
-  $("#count").textContent = games.length + " games · bundled demo library";
+  $("#count").textContent = games.length + " games · bundled hot  library";
 });
 </script>
 </body>
